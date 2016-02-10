@@ -14,7 +14,11 @@ defmodule ConnectionTracker do
     GenServer.call(server, {:search, ip})
   end
 
-  # callbacks, server API
+  def crash_server(server, number) when is_number number do
+    GenServer.call(server, {:crash_me, number})
+  end
+
+  # server API
   def init(:ok) do
     {:ok, HashDict.new}
   end
@@ -30,6 +34,10 @@ defmodule ConnectionTracker do
 
   def handle_call({:search, ip}, _from, connection_dict) do
     {:reply, HashDict.fetch(connection_dict, ip), connection_dict}
+  end
+
+  def handle_call({:crash_me, number}, _from, connection_dict) do
+    {:reply, div(number,0), connection_dict}
   end
 
   def handle_info(info, state) do
