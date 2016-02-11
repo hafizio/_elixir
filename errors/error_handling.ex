@@ -3,16 +3,16 @@ defmodule ErrorHandling do
     try do
       div(a, b)
     rescue
-      _error -> _error
+      error -> error
     end
   end
 
   def throw_on_zero(list) do
     try do
-      Enum.each list, fn(_number) -> if _number == 0, do: throw(_number) end
+      Enum.each list, fn(number) -> if number == 0, do: throw(number) end
       "Good! No zeros on the list!"
     catch
-      _number -> "Oops! There was a #{_number} on the list!"
+      number -> "Oops! There was a #{number} on the list!"
     end
   end
 
