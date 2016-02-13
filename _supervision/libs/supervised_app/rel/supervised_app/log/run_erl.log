@@ -1,0 +1,8 @@
+run_erl [3706] Thu Feb 11 09:49:49 2016
+Args before exec of shell:
+run_erl [3706] Thu Feb 11 09:49:49 2016
+argv[0] = sh
+run_erl [3706] Thu Feb 11 09:49:49 2016
+argv[1] = -c
+run_erl [3706] Thu Feb 11 09:49:49 2016
+argv[2] = exec "/Users/hafiz/_elixir/supervised_app/rel/supervised_app/bin/supervised_app" "console"

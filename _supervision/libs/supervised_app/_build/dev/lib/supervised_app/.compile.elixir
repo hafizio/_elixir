@@ -1,0 +1,7 @@
+v2.
+{<<"_build/dev/lib/supervised_app/ebin/Elixir.SupervisedApp.beam">>,
+ 'Elixir.SupervisedApp',module,<<"lib/supervised_app.ex">>,
+ ['Elixir.Kernel','Elixir.Module','Elixir.Supervisor.Spec',
+  'Elixir.Application'],
+ ['Elixir.SupervisedApp.Supervisor','Elixir.Supervisor'],
+ [],nil}.
