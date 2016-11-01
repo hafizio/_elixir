@@ -12,4 +12,12 @@ defmodule SumTest do
     assert Sum.call(3) == 6
   end
 
+  test "add(n)" do
+    assert Sum.add(3) == 6
+  end
+
+  test "multiply(n)" do
+    assert Sum.multiply(3) == 6
+  end
+
 end
