@@ -1,8 +1,12 @@
 defmodule StringReverser do
 
   @doc """
-  Main method to reverse the string
   String.reverse(string)
+
+  Complexity:
+
+  C(n) = 0 for n = 0 or n = 1
+  C(n) = 1 + C(n-1) for n > 1
   """
 
   def call(string) do
