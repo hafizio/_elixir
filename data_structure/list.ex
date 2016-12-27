@@ -41,4 +41,19 @@ defmodule DataStructure.List do
     |> List.last()
   end
 
+  @doc """
+  max/1 w/ acc
+  """
+  def max_(list), do: _max_(list, 0)
+
+  defp _max_([], max), do: max
+  defp _max_([head | tail], max) do
+    if head > max  do
+      _max_(tail, head)
+    else
+      _max_(tail, max)
+    end
+  end
+
 end
+

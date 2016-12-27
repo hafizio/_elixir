@@ -25,4 +25,8 @@ defmodule DataStructure.ListTest do
     assert DataStructure.List.max([1, 2, 3]) == 3
   end
 
+  test "max_([])" do
+    assert DataStructure.List.max_([1, 2, 3]) == 3
+  end
+
 end
