@@ -55,5 +55,25 @@ defmodule DataStructure.List do
     end
   end
 
+  @doc """
+  span a list from range
+  """
+  def span(from, to), do: Enum.to_list(from..to)
+
+  @doc """
+  span a list manually to upper limit w/ acc
+  """
+  def span_(from, to), do: _span_(from, to, from)
+  defp _span_(_, to, acc) when acc === to, do: [to]
+  defp _span_(from, to, acc) do
+    [from | _span_(from + 1, to, acc + 1)]
+  end
+
+  @doc """
+  span a list manually to upper limit w/o acc
+  """
+  def span__(from, to) when from === to, do: [to]
+  def span__(from, to), do: [from | span__(from + 1, to)]
+
 end
 

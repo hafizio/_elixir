@@ -29,4 +29,16 @@ defmodule DataStructure.ListTest do
     assert DataStructure.List.max_([1, 2, 3]) == 3
   end
 
+  test "span(a, b)" do
+    assert DataStructure.List.span(1, 3) == [1, 2, 3]
+  end
+
+  test "span_(a, b)" do
+    assert DataStructure.List.span_(1, 3) == [1, 2, 3]
+  end
+
+  test "span__(a, b)" do
+    assert DataStructure.List.span__(1, 5) == [1, 2, 3, 4, 5]
+  end
+
 end
